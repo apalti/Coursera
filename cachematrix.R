@@ -16,6 +16,15 @@ makeCacheMatrix <- function(x = matrix()) {
 # used for calculating the inverse of a matrix
 # For consequetives calls with a same matrix, retruns the cached inverse value instead of re-calculating,
 # and prints out informative message reflecting that
+# 
+# Example: The inverse of the matrix
+#       4   7
+#       2   6
+# 
+# is
+#       0.6  -0.7
+#       -0.2  0.4
+#
 cacheSolve <- function(x=matrix(), ...) {
     m<-x$getmatrix()
     if(!is.null(m)){
