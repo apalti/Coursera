@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # For consequetives calls with a same matrix, retruns the cached inverse value instead of re-calculating,
 # and prints out informative message reflecting that
 # 
-# Example: The inverse of the matrix
+#  The inverse of the matrix
 #       4   7
 #       2   6
 # 
@@ -25,6 +25,10 @@ makeCacheMatrix <- function(x = matrix()) {
 #       0.6  -0.7
 #       -0.2  0.4
 #
+#  Usage example:
+#   Z<-makeCacheMatrix(matrix(c(4,2,7,6),ncol=2, nrow=2))
+#   cacheSolve(Z)
+
 cacheSolve <- function(x=matrix(), ...) {
     m<-x$getmatrix()
     if(!is.null(m)){
